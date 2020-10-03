@@ -1,0 +1,12 @@
+{
+  "name": "server-web",
+  "version": "1.0.0",
+  "description": "Servidor referente a aula 11 de web",
+  "main": "index.js",
+  "author": "Leo Gonzaga",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  }
+}
