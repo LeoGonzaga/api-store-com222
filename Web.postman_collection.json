@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "115357a0-7fbe-4d2e-9135-77c651e3a617",
+		"name": "Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adicionar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"LeOnardo\",\n    \"cpf\":\"123.132.123-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.104:3000/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibir todos usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.104:3000/all",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuário por nome",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Léo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.104:3000/userByName",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"userByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Leo 3\",\n    \"cpf\":\"123\",\n    \"newName\":\"Leo 3\",\n    \"newCpf\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.104:3000/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuário por CPF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\":\"123.123.111-22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.104:3000/userByCPF/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"userByCPF",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleter usuário por CPF",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\":\"123.132.123-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.104:3000/deleteByCPF/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"104"
+					],
+					"port": "3000",
+					"path": [
+						"deleteByCPF",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
