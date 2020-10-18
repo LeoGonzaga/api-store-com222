@@ -1,7 +1,7 @@
 {
   "name": "server-web",
   "version": "1.0.0",
-  "description": "Servidor referente a aula 11 de web",
+  "description": "API para o painel de geração de nota fiscal em angular",
   "main": "index.js",
   "author": "Leo Gonzaga",
   "license": "MIT",

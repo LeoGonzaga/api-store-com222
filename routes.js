@@ -1,13 +1,21 @@
 const express = require("express");
-const User = require("./src/Controllers/UserController");
-
+const Product = require("./src/Controllers/ProductController");
+const Cart = require("./src/Controllers/CartController");
 const routes = express.Router();
 
-routes.get("/all", User.getAllUsers);
-routes.post("/userByName", User.getUserByName);
-routes.post("/userByCPF", User.getUserByCPF);
-routes.post("/create", User.createUser);
-routes.put("/update", User.updateUser);
-routes.delete("/deleteByCPF", User.deleteUser);
+// Produtos
+routes.get("/all", Product.getAllProducts);
+routes.post("/create", Product.createProduct);
+routes.post("/getProductByName", Product.getProductByName);
+routes.post("/getByRebate", Product.getByRebate);
+routes.post("/getByValue", Product.getByValue);
+routes.put("/update", Product.updateProduct);
+routes.delete("/delete", Product.removeProduct);
+
+// Carrinho
+routes.get("/cart", Cart.showCart);
+routes.get("/addItem", Cart.addCart);
+routes.put("/updateItem", Cart.updateItem);
+routes.delete("/removeItem", Cart.removeProduct);
 
 module.exports = routes;
