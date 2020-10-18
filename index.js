@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
@@ -16,6 +16,7 @@ mongoose.connect(
 );
 
 app.use(express.json());
+app.use(cors);
 app.use(routes);
 
 app.listen(port, () => {
