@@ -14,7 +14,7 @@ routes.delete("/delete", Product.removeProduct);
 
 // Carrinho
 routes.get("/cart", Cart.showCart);
-routes.get("/addItem", Cart.addCart);
+routes.post("/addItem", Cart.addCart);
 routes.put("/updateItem", Cart.updateItem);
 routes.delete("/removeItem", Cart.removeProduct);
 
